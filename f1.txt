@@ -1,0 +1,76 @@
+git cheatsheet
+
+Types of git controls
+	Local version control
+	Centralized version control
+	Distributed version control
+
+git file states
+	Modified files
+	Staged files
+	Committed files
+
+Changing global git configs
+git config --user.name "Sidath"
+git config --user.email "a@a"
+git config --core.editor "vim"
+
+View global configs
+git config -l
+
+Initiate a repository
+Go to the folder and type
+git init
+
+Add files to stage
+git add *.txt (any type of file you want to monitor)
+git add . (this stage the entire directory)
+
+Add files to ignore
+save a file named .gitignore and populate it with filetypes and specific files that you want to ignore from monitoring
+
+Track the file status
+git status
+
+Committing directly. Not the best way to do....!!!
+git commit -m 'Initial Project Version'
+
+To see the changes made to files
+git diff
+git diff --cached
+
+To stage files
+git add filename
+
+To commit files
+git commit 
+
+To delete files
+permanent delete: Will delete from the system.
+git rm -f Delete.txt
+
+Delete from staging area. The file will not be deleted from the system.
+git rm --cached Delete.txt
+
+To see all the changes made
+git log
+git log --pretty=oneline
+git log --pretty=format:"%h : %an : %ar : %s"
+git log -p -2 (Shows last two change logs)
+git log --stat (Gives the change stats)
+git log --since=1.weeks (show changes for last week)
+git log --since="2015-01-03" (show changes since the specified date)
+git log --author="sidath" (Changes made by a specific author)
+git log --before="2015-01-03"
+
+To change the comments of the last commit
+git commit --amend
+
+Add the git origin
+git remote add origin https://github.com/sidathssm/firstRepo.git
+
+Push all files to origin (be careful!!!)
+git push origin master
+
+
+ 
